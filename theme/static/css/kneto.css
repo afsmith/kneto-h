@@ -1,0 +1,33 @@
+.font {
+ 
+     font-weight:400; /*Normal*/
+     font-weight:600; /*Semi-Bold*/
+     font-weight:700; /*Bold*/
+     font-weight:800; /*Extra-Bold*/
+
+}
+.header {
+     padding:20px;
+     background:#fff;
+
+}
+
+.panel-default-kneto {
+    border-color: transparent ;
+}
+
+.tree-kneto {
+    display: none;
+}
+
+.panel-kneto {
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.icon-stack  {
+    font-size: 12em;
+} 
