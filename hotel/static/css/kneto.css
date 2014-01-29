@@ -1,3 +1,40 @@
+html,body,section{height:100% !important ; } 
+
+section{
+  background-repeat:no-repeat; 
+  background-size:cover;
+}
+
+.section1{
+  background-image:    url(../img/BG_front.jpg);
+}
+
+.section2{
+  background-image:    url(../img/BG_test.jpg);  
+}
+
+.section3{
+  background-image:    url(http://farm4.staticflickr.com/3815/11130938396_6a9c666021_o.jpg);
+  height:100% ;
+
+
+}
+
+.m-top {
+    margin-top: 80px;
+}
+
+.trans-blue {
+    background-color: rgba(80, 139, 200, 0.5);
+}
+.trans-black {
+    background-color: rgba(000, 000, 000, 0.5);
+}
+
+
+
+
+
 .font {
  
      font-weight:400; /*Normal*/
@@ -37,3 +74,7 @@
     margin-top:0px;
     padding:23px 0 26px 0;
 }
+
+
+/*css reset*/
+html,body{margin:0 !important; padding:0 !important;}

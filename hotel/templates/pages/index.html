@@ -49,6 +49,8 @@
 
 <body id="{% block body_id %}body{% endblock %}">
 
+
+
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 <div class="container">
 <div class="navbar-header">
@@ -70,7 +72,78 @@
 
 
 
-<div class="col-md-12">
+<section class="section1">
+  <div class="container">
+     <div class="row">
+      <div class="col-md-8 m-top">
+        <div class="jumbotron trans-blue">
+          <h3>KNETO GIVES YOU CONTROL OVER YOUR PRECIOUS OFFERS</h3>
+            <ul class="list-unstyled">
+              <li>A well presented...</li>
+              <li>A well presented...</li>
+              <li>A well presented...</li>
+              <li>A well presented...</li>
+            </ul>
+
+        </div>
+      </div>
+
+      <div class="col-md-4 m-top">
+        <div class="jumbotron trans-black">
+          <h3>UNDERSTAND YOUR CUSTOMER NEEDS</h3>
+          <p>Faucibus porta lacus fringilla vel Aenean sit amet erat nunc  Eget porttitor lorem</p>
+          <h4>Learn more</h4><a class="glyphicon glyphicon-remove-circle" role="button"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">    
+
+    <div class="col-md-4">
+        <div class="jumbotron">
+          <h3>BE AHEAD OF YOUR COMPETITION</h3>
+            <ul class="list-unstyled">
+              <li>Drive more sales with prospect tracking</li>
+            </ul>
+          <a class="glyphicon glyphicon-remove-circle" role="button"></a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="jumbotron">
+          <h3>News</h3>
+          <ul class="list-unstyled">
+              <li>News...</li>
+              <li>News...</li>
+              <li>News...</li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="jumbotron">
+          <h3>BE THE FIRST TO KNOW</h3>
+          <p>Faucibus porta lacus fringilla vel Aenean sit amet erat nunc  Eget porttitor lorem</p>
+          <h4>Learn more</h4><a class="glyphicon glyphicon-remove-circle" role="button"></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- 
+<section class="section2">
+<div class="row">
+<div class="col-md-7 col-md-offset-1">
+  
+ 
+
 <span class="icon-stack glyphicon glyphicon-search"></span>
 
 <div class="panel-group" id="accordion">
@@ -84,7 +157,9 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse in">
       <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        {% editable page.homepage.acctop %}
+        {{ page.homepage.acctop }}
+        {% endeditable %}
       </div>
     </div>
   </div>
@@ -120,8 +195,10 @@
 
 
 </div>
+</div>
 
-
+</section>
+-->
 
 </div>
 </div>
@@ -140,6 +217,8 @@
 </div>
 </div>
 </footer>
+
+
 
 {% include "includes/footer_scripts.html" %}
 
