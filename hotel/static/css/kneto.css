@@ -5,6 +5,10 @@ section{
   background-size:cover;
 }
 
+.font-white {
+    color:rgb(255,255,255);
+}
+
 .section1{
   background-image:    url(../img/BG_front.jpg);
 }
@@ -25,13 +29,35 @@ section{
 }
 
 .trans-blue {
-    background-color: rgba(80, 139, 200, 0.5);
+    background-color: rgba(80, 139, 200, 0.7);
 }
 .trans-black {
-    background-color: rgba(000, 000, 000, 0.5);
+    background-color: rgba(000, 000, 000, 0.7);
 }
 
+.jumbotron {
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 2.0;
+    margin-bottom: 10px;
+}
 
+.col-md-4 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+ 
+}
+
+.col-md-8 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
 
 
 
