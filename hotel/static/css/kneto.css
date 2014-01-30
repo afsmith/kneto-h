@@ -1,27 +1,66 @@
-html,body,section{height:100% !important ; } 
+ html,body,section{
+  height:100% !important ; 
+  overflow-y: scroll;
+  overflow-x: hidden;
+  } 
 
 section{
-  background-repeat:no-repeat; 
-  background-size:cover;
+  background-repeat:no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+
 }
+
+.min-h {
+  min-height: 1300px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.bottomaligned {
+    position:absolute; bottom:0;  
+    margin-bottom:25px;
+     
+   }
 
 .font-white {
     color:rgb(255,255,255);
 }
 
+.font-orange {
+    color:rgb(255,128,0);
+}
+
 .section1{
-  background-image:    url(../img/BG_front.jpg);
+  background-image:     url(../img/BG_front.jpg);
+  max-height: 1264px;
+  min-height: 750px;
 }
 
 .section2{
-  background-image:    url(../img/BG_test.jpg);  
+  background-image:    url(../img/Kneto_1.jpg); 
+  max-height: 1000px; 
+  min-height: 625px;
+}
+.section21{
+  background-image:    url(../img/Kneto_2.jpg); 
+  max-height: 1000px; 
+  min-height: 750px;
 }
 
 .section3{
-  background-image:    url(http://farm4.staticflickr.com/3815/11130938396_6a9c666021_o.jpg);
-  height:100% ;
+ background-image:    url(../img/Kneto_3.jpg); 
+ max-height: 482px; 
+ min-height: 100px;
+}
 
-
+.navbar {
+  margin-bottom: 0px;
 }
 
 .m-top {
@@ -35,26 +74,66 @@ section{
     background-color: rgba(000, 000, 000, 0.7);
 }
 
-.jumbotron {
+.white-panel {
+  background-color: rgb(255, 255, 255);
+  border-width: 4px;
+  border-color: rgba(000, 000, 000, 0.7);
+}
+
+.breadcrumb {
+ 
+  background:#65912f;
+  color:#d00b01;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.greenline {
+  background-color: rgb(101, 145, 47);
+  min-height: 60px;
+  margin-bottom: 0px !important;
+}
+
+.fp-panel-t {
+  min-height: 280px;
+}
+.fp-panel-b {
+  min-height: 360px;
+}
+
+.fp-panel-2 {
+  min-height: 580px;
+}
+
+.fp-panel-21 {
+  min-height: 580px;
+}
+
+.fp-panel-3 {
+  min-height: 340px;
+}
+
+
+
+.panel {
+
     font-size: 14px;
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    line-height: 2.0;
     margin-bottom: 10px;
+    border-radius: 0px !important;
 }
 
 .col-md-4 {
-    position: relative;
-    min-height: 1px;
+    
     padding-right: 10px;
     padding-left: 10px;
  
 }
 
 .col-md-8 {
-    position: relative;
-    min-height: 1px;
+
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -91,9 +170,12 @@ section{
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
-.icon-stack  {
-    font-size: 10em;
-} 
+.fp-icon  {
+    font-size: 3em;
+    color: rgb(128, 128, 128);
+}
+ 
+
 
 .footer_bottom {
     background:#000000;
