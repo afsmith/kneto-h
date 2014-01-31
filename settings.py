@@ -311,7 +311,7 @@ OPTIONAL_APPS = (
 
 DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 
-#DEVICE_DEFAULT = "mobile"
+DEVICE_DEFAULT = "mobile"
 
 DEVICE_USER_AGENTS = (
     ("mobile", ("Android", "BlackBerry", "iPhone")),
