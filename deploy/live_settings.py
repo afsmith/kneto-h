@@ -44,7 +44,7 @@ CACHES = {
 
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 
-ALLOWED_HOSTS = [ '.kneto.com','kneto.com', '109.74.10.96', 'kneto.fi', 'kneto.se',
+ALLOWED_HOSTS = [ '.kneto.com','kneto.com', '109.74.11.85', 'kneto.fi', 'kneto.se',
                 'www.kneto.com', 'www.kneto.se', 'www.kneto.fi', ]
 
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
