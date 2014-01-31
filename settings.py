@@ -250,7 +250,7 @@ INSTALLED_APPS = (
     "mezzanine.galleries",
     #"mezzanine.twitter",
     "mezzanine.accounts",
-    #"mezzanine.mobile",
+    "mezzanine.mobile",
 )
 
 # List of processors used by RequestContext to populate the context.
@@ -310,6 +310,14 @@ OPTIONAL_APPS = (
 )
 
 DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
+
+#DEVICE_DEFAULT = "mobile"
+
+DEVICE_USER_AGENTS = (
+    ("mobile", ("Android", "BlackBerry", "iPhone")),
+    ("desktop", ("Windows", "Macintosh", "Linux")),
+)
+
 
 ###################
 # DEPLOY SETTINGS #

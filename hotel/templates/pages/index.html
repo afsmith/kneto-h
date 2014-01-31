@@ -1,3 +1,5 @@
+{% load pages_tags mezzanine_tags i18n future staticfiles blog_tags keyword_tags %}
+
 <!doctype html>
 <html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
@@ -80,29 +82,30 @@
 <section class="section1">
   <div class="container">
      <div class="row">
-      <a style="display:block" href="#2">
+      
       <div class="col-md-8 m-top">
+        <a style="display:block" href="#2">
         <div class="panel trans-blue font-white fp-panel-t ">
-          <h4>KNETO GIVES YOU CONTROL OVER YOUR PRECIOUS OFFERS</h4>
+          <h3>{{ page.homepage.lefttop_header }}</h3>
             <ul class="list-unstyled">
-              <li>A well presented...</li>
-              <li>A well presented...</li>
-              <li>A well presented...</li>
-              <li>A well presented...</li>
+              <li>{{ page.homepage.lefttop_line1 }}</li>
+              <li>{{ page.homepage.lefttop_line2 }}</li>
+              <li>{{ page.homepage.lefttop_line3 }}</li>
+              <li>{{ page.homepage.lefttop_line4 }}</li>
+              <li>{{ page.homepage.lefttop_line5 }}</li>
             </ul>
 
         </div>
       </div>
-        </a>
+        
       <a class="font-white" style="display:block" href="#2.1">
       <div class="col-md-4 m-top">
         <div class="panel trans-black font-white fp-panel-t">
-          <h4>UNDERSTAND YOUR CUSTOMER NEEDS</h4>
-          <p>Faucibus porta lacus fringilla vel Aenean sit amet erat nunc  Eget porttitor lorem</p>
-          <h4>Learn more</h4><a class="glyphicon glyphicon-remove fp-icon" role="button"></a>
+          <h3>{{ page.homepage.righttop_header }}</h3>
+          <p>{{ page.homepage.lefttop_line1 }}</p>
+          <h4>Learn more</h4></a><a class="glyphicon glyphicon-remove fp-icon" role="button"></a>
         </div>
       </div>
-    </a>
  
     </div>
 
@@ -110,43 +113,54 @@
       <a class="font-white" style="display:block" href="#3">   
         <div class="col-md-5">
           <div class="panel trans-black font-white fp-panel-b">
-            <h3>BE AHEAD OF YOUR COMPETITION</h3>
-              <h5>Drive more sales with prospect <br> tracking </h5>
+            <h3>{{ page.homepage.leftbottom_header }}</h3></a>
+              <h5>{{ page.homepage.leftbottom_line1 }}</h5>
                 <a class="glyphicon glyphicon-remove fp-icon" role="button"></a>
                 <a class="pull-right" href="#3">
                 <img class="media-object" src="{% static "img/FP_3.png"  alt="Call list and graphs" %}"></a>
         
           </div>
         </div>
-          </a>
+        
 
         <div class="col-md-3">
           <div class="panel white-panel fp-panel-b">
-            <h4>News</h4>
-            <ul class="list-unstyled">
-                <li>News...</li>
-                <li>News...</li>
-                <li>News...</li>
-              </ul>
+             
+                   {% block blog_recent_posts %}
+                    {% blog_recent_posts 3 category="news" as recent_posts %}
+                    {% if recent_posts %}
+                    <h3 class="font-red">{% trans "News" %}</h3>
+                    <ul class="news list-unstyled">
+                    {% for recent_post in recent_posts %}
+                    <li><a href="{{ recent_post.get_absolute_url }}"
+                        >{{ recent_post.title }}</a></li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                    {% endblock %}
+                       
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="panel trans-black font-white fp-panel-b">
-            <h3>BE THE FIRST TO KNOW</h3>
+            <h3>{{ page.homepage.rightbottom_header }}</h3>
               <div class="font-orange">
             <h2>- SIGN UP NOW</h2>
               </div>
-            <p>Faucibus porta lacus fringilla vel Aenean sit amet erat nunc  Eget porttitor lorem</p>
+            <p>{{ page.homepage.rightbottom_line1 }}</p>
             
-              <form class="form-inline bottomaligned" role="form">
-                  <div class="form-group">
-                    <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-                  </div>
-                  <button   type="submit" class="btn btn-default">Go</button>
-                  <button id="2"  type="submit" class="btn btn-default">Go</button>
-                </form>
+              {% errors_for form %}
+
+    <form class="mezzanine-form form-inline" method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+        {% fields_for form %}
+     
+            <input class="btn btn-primary" type="submit" value="Go">
+      
+    </form>    
+      
+
+
           </div>
         </div>
       </div>
@@ -154,16 +168,10 @@
 
 <section class="section2">
   <div class="row">
-    <div class="col-md-5 col-md-offset-2">
+    <div id="2" class="col-md-5 col-md-offset-2">
       <div class="fp-panel-2">
-        <h2>Sed ut perspiciatis unde omnis iste natus error sit </h2>
-        voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, 
-        <p>
-          qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-        <p>
-          Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
-        <p>
-          voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, 
+        <h2>{{ page.homepage.section1_header }}</h2>
+        {{ page.homepage.section1 }}
    
       </div>
     </div>
@@ -174,17 +182,8 @@
   <div id="2.1" class="row">
     <div class="col-md-5 col-md-offset-2">
       <div class="fp-panel-21">
-        <h2>Sed ut perspiciatis unde omnis iste natus error sit </h2>
-        voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, 
-        <p>
-          qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-        <p>
-          Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
-        <p>
-          voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, 
-        <p>
-          qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-        <p>
+        <h2>{{ page.homepage.section2_header }}</h2>
+            {{ page.homepage.section2 }}
       </div>
     </div>
   </div>
@@ -194,9 +193,8 @@
   <div class="row">
     <div class="col-md-5 col-md-offset-2">
       <div class="fp-panel-3">
-        <h2>Sed ut perspiciatis unde omnis iste natus error sit </h2>
-        voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+        <h2>{{ page.homepage.section3_header }}</h2>
+            {{ page.homepage.section3 }}
       </div>
     </div>
   </div>
@@ -205,85 +203,83 @@
 <section id="4" class="section4">
   <div class="row">
     <div class="col-md-5 col-md-offset-2">
-      <div class="panel fp-panel-3">
-        <h3>WHAT DO YOU GET?</h3>
+      <div class="panel fp-panel-3 panel-why">
+        <h3>{{ page.homepage.get_header }}</h3>
         <div class="panel-group" id="accordion">
-  <div class="panel panel-default">
+  <div class="panel panel-default panel-why">
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-          Collapsible Group Item #1
+          {{ page.homepage.get_header1 }}
         </a>
       </h4>
     </div>
     <div id="collapseOne" class="panel-collapse collapse in">
       <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          {{ page.homepage.get_text1 }}
       </div>
     </div>
   </div>
-  <div class="panel panel-default">
+  <div class="panel panel-default panel-why">
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-          Collapsible Group Item #2
+          {{ page.homepage.get_header2 }}
         </a>
       </h4>
     </div>
     <div id="collapseTwo" class="panel-collapse collapse">
       <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        {{ page.homepage.get_text2 }}
       </div>
     </div>
   </div>
-  <div class="panel panel-default">
+  <div class="panel panel-default panel-why">
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-          Collapsible Group Item #3
+           {{ page.homepage.get_header3 }}
         </a>
       </h4>
     </div>
-    <div id="collapseThree" class="panel-collapse collapse">
+    <div id="collapseThree" class="panel-collapse collapse panel">
       <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          {{ page.homepage.get_text3 }}
       </div>
     </div>
   </div>
 
-      <div class="panel panel-default">
+      <div class="panel panel-default panel-why">
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-          Collapsible Group Item #4
+          {{ page.homepage.get_header4 }}
         </a>
       </h4>
     </div>
     <div id="collapseFour" class="panel-collapse collapse">
       <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          {{ page.homepage.get_text4 }}
       </div>
     </div>
   </div>
-    <div class="panel panel-default">
+    <div class="panel panel-default panel-why">
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
-          Collapsible Group Item #5
+          {{ page.homepage.get_header5 }}
         </a>
       </h4>
     </div>
     <div id="collapseFive" class="panel-collapse collapse">
       <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          {{ page.homepage.get_text5 }}
       </div>
     </div>
   </div>
 
   </div>
       
-      
-
         </div>
       </div>
     </div>
@@ -296,7 +292,7 @@
 </div>
 </div>
 
-<footer>
+<!-- <footer>
 <div class="container">
 {% page_menu "pages/menus/footer.html" %}
 
@@ -309,7 +305,9 @@
 </p>
 </div>
 </div>
-</footer>
+</footer> -->
+
+{% include "pages/menus/footer_k.html" %}
 
 
 

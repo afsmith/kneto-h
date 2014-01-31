@@ -14,6 +14,9 @@ section{
 
 }
 
+.btn {
+  vertical-align: bottom;
+}
 .min-h {
   min-height: 1300px;
 }
@@ -34,7 +37,9 @@ a {
     color:rgb(255,255,255) !important;
 }
 
-
+.font-red {
+  color:rgb(204,0,0);
+}
 
 .font-dk {
     color:rgb(32,32,32);
@@ -137,6 +142,21 @@ a {
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-radius: 0px !important;
+
+}
+
+.panel-heading  {
+    background-image: none !important;
+    background-color: rgb(253, 253, 251) !important;
+  }
+
+.panel-default {
+  border-color: rgb(253, 253, 251) !important; 
+}
+
+.panel-why {
+  background-color: rgb(253, 253, 251) !important;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.00) !important;
 }
 
 .col-md-4 {
@@ -197,6 +217,39 @@ a {
     padding:23px 0 26px 0;
 }
 
+.breadcrumb {
+    margin-top: 25px !important;
+ 
+    }
+
+foot_right_block {
+  text-align:right;
+  padding-top:15px;
+}
+.foot_right_block .fright {margin-left:20px;
+}
+
+#footer textarea { min-height:100px !important;
+}
+#footer textarea:focus, #footer input[type="text"]:focus {
+  outline: 0;
+}
+
+.footer_bottom {
+  background:#838282;
+  margin-top:0px;
+  padding:23px 0 26px 0;
+}
+.copyright {
+  color:#444444;
+}
+
+.copyright a {
+  color:#444444 !important;
+  font-size: 10px;
+  font-style:normal !important;
+
+}
 
 /*css reset*/
 html,body{margin:0 !important; padding:0 !important;}

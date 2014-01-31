@@ -1,7 +1,16 @@
 from __future__ import unicode_literals
 
+
 SECRET_KEY = "%(secret_key)s"
 NEVERCACHE_KEY = "%(nevercache_key)s"
+
+#TEMPLATE_DEBUG = True
+#DEBUG = True
+
+ADMINS = (
+    ('Andrew Smith', 'andrew.smith@kneto.fi'),
+)
+
 
 DATABASES = {
     "default": {
@@ -34,3 +43,21 @@ CACHES = {
 }
 
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+
+ALLOWED_HOSTS = [ '.kneto.com','kneto.com', '109.74.10.96', 'kneto.fi', 'kneto.se',
+                'www.kneto.com', 'www.kneto.se', 'www.kneto.fi', ]
+
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER='andrew.smith@kneto.com'
+EMAIL_HOST_PASSWORD='rFUnDlfNA5l)[ncu\'IN6N.P!R'
+DEFAULT_FROM_EMAIL='cc@kneto.com'
+DEFAULT_BCC_EMAIL='app@kneto.fi'
+EMAIL_USE_TLS=True
+
+ZENDESK_SUBDOMAIN = 'kneto'
+ZENDESK_TOKEN   = '9azarkVcbOCrEyWLnRov1KWQdaXvNo10QjaZBINiHz4hoFa0'
+
