@@ -85,7 +85,7 @@
       <div class="col-md-8 m-top">
         <a style="display:block" href="#2">
         <div class="panel trans-blue font-white fp-panel-t ">
-          <h2>{{ page.homepage.lefttop_header }}</h3>
+          <h2>{{ page.homepage.lefttop_header }}</h2>
             <ul class="list-unstyled lead">
               <li>{{ page.homepage.lefttop_line1 }}</li>
               <li>{{ page.homepage.lefttop_line2 }}</li>
@@ -98,13 +98,13 @@
       </a>
       </div>
         
-      <a class="font-white" style="display:block" href="#2.1">
+    <!--  <a class="font-white" style="display:block" href="#2.1"> -->
       <div class="col-md-4 m-top">
         <div class="panel trans-black font-white fp-panel-t">
-          <h2>{{ page.homepage.righttop_header }}</h3>
+          <h2>{{ page.homepage.righttop_header }}</h2>
           <p>{{ page.homepage.rightttop_line1 }}</p>
           <h4>Learn more</h4>
-          </a>
+      <!--     </a> -->
           <a class="glyphicon glyphicon-remove fp-icon" role="button"></a>
         </div>
       </div>
@@ -115,7 +115,7 @@
       <a class="font-white" style="display:block" href="#3">   
         <div class="col-md-5">
           <div class="panel trans-black font-white fp-panel-b">
-            <h2>{{ page.homepage.leftbottom_header }}</h3></a>
+            <h2>{{ page.homepage.leftbottom_header }}</h2></a>
               <h5>{{ page.homepage.leftbottom_line1 }}</h5>
                 <a class="glyphicon glyphicon-remove fp-icon" role="button"></a>
                 <a class="pull-right" href="#3">
@@ -131,7 +131,7 @@
                    {% block blog_recent_posts %}
                     {% blog_recent_posts 3 category="news" as recent_posts %}
                     {% if recent_posts %}
-                    <h3 class="font-red">{% trans "News" %}</h3>
+                    <h2 class="font-red">{% trans "News" %}</h2>
                     <ul class="news list-unstyled">
                     {% for recent_post in recent_posts %}
                     <li><a href="{{ recent_post.get_absolute_url }}"
@@ -146,7 +146,7 @@
 
         <div class="col-md-4">
           <div class="panel trans-black font-white fp-panel-b">
-            <h2>{{ page.homepage.rightbottom_header }}</h3>
+            <h2>{{ page.homepage.rightbottom_header }}</h2>
               <div class="font-orange">
             <h2>- SIGN UP NOW</h2>
               </div>
@@ -166,6 +166,7 @@
           </div>
         </div>
       </div>
+      </div>
 </section>
 
 <section class="section2">
@@ -173,7 +174,7 @@
     <div id="2" class="col-md-5 col-md-offset-2">
       <div class="fp-panel-2">
         <h2>{{ page.homepage.section1_header }}</h2>
-        {{ page.homepage.section1 }}
+        {{ page.homepage.section1|richtext_filters|safe }}
    
       </div>
     </div>
@@ -185,7 +186,7 @@
     <div class="col-md-5 col-md-offset-2">
       <div class="fp-panel-21">
         <h2>{{ page.homepage.section2_header }}</h2>
-            {{ page.homepage.section2 }}
+            {{ page.homepage.section2|richtext_filters|safe }}
       </div>
     </div>
   </div>
@@ -196,7 +197,7 @@
     <div class="col-md-5 col-md-offset-2">
       <div class="fp-panel-3">
         <h2>{{ page.homepage.section3_header }}</h2>
-            {{ page.homepage.section3 }}
+            {{ page.homepage.section3|richtext_filters|safe }}
       </div>
     </div>
   </div>
@@ -206,7 +207,7 @@
   <div class="row">
     <div class="col-md-5 col-md-offset-2">
       <div class="panel fp-panel-3 panel-why">
-        <h2>{{ page.homepage.get_header }}</h3>
+        <h2>{{ page.homepage.get_header }}</h2>
         <div class="panel-group" id="accordion">
   <div class="panel panel-default panel-why">
     <div class="panel-heading">
@@ -218,7 +219,7 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse in">
       <div class="panel-body">
-          {{ page.homepage.get_text1 }}
+          {{ page.homepage.get_text1|richtext_filters|safe }}
       </div>
     </div>
   </div>
@@ -232,7 +233,7 @@
     </div>
     <div id="collapseTwo" class="panel-collapse collapse">
       <div class="panel-body">
-        {{ page.homepage.get_text2 }}
+        {{ page.homepage.get_text2|richtext_filters|safe }}
       </div>
     </div>
   </div>
@@ -244,28 +245,28 @@
         </a>
       </h4>
     </div>
-    <div id="collapseThree" class="panel-collapse collapse panel">
+    <div id="collapseThree" class="panel-collapse collapse">
       <div class="panel-body">
-          {{ page.homepage.get_text3 }}
+          {{ page.homepage.get_text3|richtext_filters|safe }}
       </div>
     </div>
   </div>
 
-      <div class="panel panel-default panel-why">
+  <div class="panel panel-default panel-why">
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-          {{ page.homepage.get_header4 }}
+          {{ page.homepage.get_header4|richtext_filters|safe }}
         </a>
       </h4>
     </div>
     <div id="collapseFour" class="panel-collapse collapse">
       <div class="panel-body">
-          {{ page.homepage.get_text4 }}
+          {{ page.homepage.get_text4|richtext_filters|safe }}
       </div>
     </div>
   </div>
-    <div class="panel panel-default panel-why">
+  <div class="panel panel-default panel-why">
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
@@ -275,7 +276,121 @@
     </div>
     <div id="collapseFive" class="panel-collapse collapse">
       <div class="panel-body">
-          {{ page.homepage.get_text5 }}
+          {{ page.homepage.get_text5|richtext_filters|safe }}
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default panel-why">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+          {{ page.homepage.get_header6 }}
+        </a>
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse">
+      <div class="panel-body">
+          {{ page.homepage.get_text6|richtext_filters|safe }}
+      </div>
+    </div>
+  </div>
+
+      </div>
+    </div>
+   </div>
+  </div>
+      
+<!-- end of get -->
+
+ <div class="row">
+    <div class="col-md-5 col-md-offset-2">
+      <div class="panel fp-panel-3 panel-why">
+        <h2>{{ page.homepage.what_header }}</h2>
+        <div class="panel-group" id="Whataccordion">
+  <div class="panel panel-default panel-why">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#Whataccordion" href="#WhatcollapseOne">
+          {{ page.homepage.what_header1 }}
+        </a>
+      </h4>
+    </div>
+    <div id="WhatcollapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+          {{ page.homepage.what_text1|richtext_filters|safe }}
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default panel-why">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#Whataccordion" href="#WhatcollapseTwo">
+          {{ page.homepage.what_header2 }}
+        </a>
+      </h4>
+    </div>
+    <div id="WhatcollapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        {{ page.homepage.what_text2|richtext_filters|safe }}
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default panel-why">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#Whataccordion" href="#WhatcollapseThree">
+           {{ page.homepage.what_header3 }}
+        </a>
+      </h4>
+    </div>
+    <div id="WhatcollapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+          {{ page.homepage.what_text3|richtext_filters|safe }}
+      </div>
+    </div>
+  </div>
+
+      <div class="panel panel-default panel-why">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#Whataccordion" href="#WhatcollapseFour">
+          {{ page.homepage.what_header4 }}
+        </a>
+      </h4>
+    </div>
+    <div id="WhatcollapseFour" class="panel-collapse collapse">
+      <div class="panel-body">
+          {{ page.homepage.what_text4|richtext_filters|safe }}
+      </div>
+    </div>
+  </div>
+    <div class="panel panel-default panel-why">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#Whataccordion" href="#WhatcollapseFive">
+          {{ page.homepage.what_header5 }}
+        </a>
+      </h4>
+    </div>
+    <div id="WhatcollapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+          {{ page.homepage.what_text5|richtext_filters|safe }}
+      </div>
+    </div>
+  </div>
+
+      <div class="panel panel-default panel-why">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#Whataccordion" href="#WhatcollapseSix">
+          {{ page.homepage.what_header6 }}
+        </a>
+      </h4>
+    </div>
+    <div id="WhatcollapseSix" class="panel-collapse collapse">
+      <div class="panel-body">
+          {{ page.homepage.what_text6|richtext_filters|safe }}
       </div>
     </div>
   </div>
@@ -284,30 +399,21 @@
       
         </div>
       </div>
-    </div>
-</section>
+
+
+
+<!-- end of what -->
+
+
 
 <!-- end fp container -->
- </div>
+
 
 
 </div>
-</div>
+</section>
 
-<!-- <footer>
-<div class="container">
-{% page_menu "pages/menus/footer.html" %}
 
-<div class="row">
-<p class="site-info text-center">
-    {% ifinstalled mezzanine.mobile %}
-    <span class="separator">|</span>
-    <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
-    {% endifinstalled %}
-</p>
-</div>
-</div>
-</footer> -->
 
 {% include "pages/menus/footer_k.html" %}
 
