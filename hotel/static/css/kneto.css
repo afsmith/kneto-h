@@ -105,6 +105,7 @@ a {
   color:#d00b01;
   border-radius: 0px;
   margin-bottom: 0px;
+  margin-top: 45px !important;
 }
 
 .greenline {
@@ -221,10 +222,7 @@ a {
     padding:23px 0 26px 0;
 }
 
-.breadcrumb {
-    margin-top: 25px !important;
- 
-    }
+
 
 foot_right_block {
   text-align:right;
