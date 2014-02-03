@@ -61,7 +61,7 @@
         <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand logo-nav" href="/">
-                    <img src="{% static "img/Kneto_100x60.png" %}">
+                    <img src="{% static "img/Kneto_w.png" %}">
                 </a> 
 
   <!--    {% if settings.SITE_TITLE %}<a class="navbar-brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
@@ -107,7 +107,7 @@
           <h5>{{ page.homepage.righttop_line1 }}</h5>
           <h4>Learn more</h4>
      </a>
-          <a href="#2.1" class="glyphicon glyphicon-remove fp-icon" role="button"></a>
+          <a href="#2.1" class="glyphicon glyphicon-plus-sign fp-icon" role="button"></a>
         </div>
       </div>
  
@@ -121,7 +121,7 @@
             <a class="font-white" style="display:block" href="#3"> 
             <h2>{{ page.homepage.leftbottom_header }}</h2>
               <h5>{{ page.homepage.leftbottom_line1 }}</h5></a>
-                <a class="glyphicon glyphicon-remove fp-icon" role="button"></a>
+                <a class="glyphicon glyphicon-plus-sign fp-icon" role="button"></a>
                 <a class="pull-right" href="#3">
                 <img class="media-object" src="{% static "img/FP_3.png"  alt="Call list and graphs" %}"></a>
         
@@ -161,7 +161,7 @@
     <form class="mezzanine-form form-inline" method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
         {% fields_for form %}
      
-            <input class="btn btn-primary" type="submit" value="Go">
+            <input  class="btn btn-primary" type="submit" value="Go">
       
     </form>    
       
@@ -169,45 +169,52 @@
 
           </div>
         </div>
+  <div id="2"></div>
       </div>
+ 
       </div>
+
 </section>
 
 <section class="section2" >
-  <div class="row">
-    <div id="2" class="col-md-5 col-md-offset-2">
+  <div  class="row">
+    <div class="col-md-5 col-md-offset-2">
       <div class="fp-panel-2">
         <h2>{{ page.homepage.section1_header }}</h2>
         {{ page.homepage.section1|richtext_filters|safe }}
    
       </div>
+       <div id="2.1"></div>
     </div>
+
   </div>
 </section>
 
 <section class="section21">
-  <div id="2.1" class="row">
+  <div  class="row">
     <div class="col-md-5 col-md-offset-2">
       <div class="fp-panel-21">
         <h2>{{ page.homepage.section2_header }}</h2>
             {{ page.homepage.section2|richtext_filters|safe }}
       </div>
+      <div id="3"></div>
     </div>
   </div>
 </section>
 
-<section id="3" class="section3">
+<section class="section3">
   <div class="row">
     <div class="col-md-5 col-md-offset-2">
       <div class="fp-panel-3">
         <h2>{{ page.homepage.section3_header }}</h2>
             {{ page.homepage.section3|richtext_filters|safe }}
       </div>
+      <div id="4"></div>
     </div>
   </div>
 </section>
 
-<section id="4" class="section4">
+<section class="section4">
   <div class="row">
     <div class="col-md-5 col-md-offset-2">
       <div class="panel fp-panel-3 panel-why">
