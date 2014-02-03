@@ -11,8 +11,8 @@ section{
   -o-background-size: cover;
   background-size: cover;
   
-
 }
+
 
 .btn {
   vertical-align: bottom;
@@ -255,5 +255,14 @@ foot_right_block {
 
 }
 
+.nav-footer > ul {
+    display: inline-block;
+    width: 50px;
+    margin-left: 10px;
+  }
+.nav-footer {
+  float: right !important;
+
+}
 /*css reset*/
 html,body{margin:0 !important; padding:0 !important;}
