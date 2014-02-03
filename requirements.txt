@@ -7,3 +7,4 @@ Fabric==1.8.1
 South==0.8.4
 django-templated-email==0.4.9
 pygeoip==0.3.0
+pyjwt==0.1.8
