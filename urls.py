@@ -87,6 +87,8 @@ urlpatterns += patterns('',
 
     # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
 
+        (r'zendesk/sso$', 'hotel.views.index')
+
 )
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
