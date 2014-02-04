@@ -77,12 +77,13 @@
 <!-- <div class="panel greenline">
   </div> -->
 
-
+ {% if flavour != "mobile" %}
 <section class="section1">
+{% endif %}
   <div class="container">
      <div class="row">
       
-      <div class="col-md-8 m-top">
+      <div class="col-md-8  col-xs-12 m-top">
         <a style="display:block" href="#2">
         <div class="panel trans-blue font-white fp-panel-t ">
        
@@ -94,13 +95,13 @@
               <li>{{ page.homepage.lefttop_line4 }}</li>
               <li>{{ page.homepage.lefttop_line5 }}</li>
             </ul>
-    
+           
         </div>
       </a>
       </div>
         
     
-      <div class="col-md-4 m-top">
+      <div class="col-md-4 col-xs-12 m-top">
         <div class="panel trans-black font-white fp-panel-t">
           <a class="font-white" style="display:block" href="#2.1">
           <h2>{{ page.homepage.righttop_header }}</h2>
@@ -114,7 +115,7 @@
 
       <div class="row"> 
         
-        <div class="col-md-5">
+        <div class="col-md-5 col-xs-12">
 
           <div class="panel trans-black font-white fp-panel-b">
             <a class="font-white" style="display:block" href="#3"> 
@@ -128,7 +129,7 @@
         </div>
         
 
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-12">
           <div class="panel white-panel fp-panel-b">
              
                    {% block blog_recent_posts %}
@@ -147,7 +148,7 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 col-xs-12">
           <div class="panel trans-black font-white fp-panel-b">
             <h2>{{ page.homepage.rightbottom_header }}</h2>
               <div class="font-orange">
@@ -168,12 +169,16 @@
         </div>
       </div>
       </div>
-
+ {% if flavour != "mobile" %}
 </section>
+{% endif %}
 
+ {% if flavour != "mobile" %}
 <section class="section2" >
+{% endif %}
+
   <div  class="row">
-    <div class="col-md-5 col-md-offset-2">
+    <div class="col-md-5 col-md-offset-2 col-xs-12">
       <div class="fp-panel-2">
         <h2>{{ page.homepage.section1_header }}</h2>
         {{ page.homepage.section1|richtext_filters|safe }}
@@ -183,11 +188,15 @@
     </div>
 
   </div>
+ {% if flavour != "mobile" %}  
 </section>
+{% endif %}
 
+ {% if flavour != "mobile" %}
 <section class="section21">
+  {% endif %}
   <div  class="row">
-    <div class="col-md-5 col-md-offset-2">
+    <div class="col-md-5 col-md-offset-2 col-xs-12">
       <div class="fp-panel-21">
         <h2>{{ page.homepage.section2_header }}</h2>
             {{ page.homepage.section2|richtext_filters|safe }}
@@ -195,11 +204,15 @@
       <div id="3"></div>
     </div>
   </div>
+   {% if flavour != "mobile" %}
 </section>
+{% endif %}
 
+ {% if flavour != "mobile" %}
 <section class="section3">
+  {% endif %}
   <div class="row">
-    <div class="col-md-5 col-md-offset-2">
+    <div class="col-md-5 col-md-offset-2 col-xs-12">
       <div class="fp-panel-3">
         <h2>{{ page.homepage.section3_header }}</h2>
             {{ page.homepage.section3|richtext_filters|safe }}
@@ -207,11 +220,14 @@
       <div id="4"></div>
     </div>
   </div>
+   {% if flavour != "mobile" %}
 </section>
-
+{% endif %}
+ {% if flavour != "mobile" %}
 <section class="section4">
+  {% endif %}
   <div class="row">
-    <div class="col-md-5 col-md-offset-2">
+    <div class="col-md-5 col-md-offset-2 col-xs-12">
       <div class="panel fp-panel-3 panel-why">
         <h2>{{ page.homepage.get_header }}</h2>
         <div class="panel-group" id="accordion">
@@ -429,7 +445,9 @@
 
 
 </div>
+ {% if flavour != "mobile" %}
 </section>
+{% endif %}
 
 
 

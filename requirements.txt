@@ -8,3 +8,4 @@ South==0.8.4
 django-templated-email==0.4.9
 pygeoip==0.3.0
 pyjwt==0.1.8
+django-mobile==0.3.0

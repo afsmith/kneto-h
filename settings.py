@@ -141,6 +141,7 @@ INTERNAL_IPS = ("127.0.0.1",)
 TEMPLATE_LOADERS = (
     "django.template.loaders.filesystem.Loader",
     "django.template.loaders.app_directories.Loader",
+    "django_mobile.loader.Loader",
 )
 
 AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
@@ -239,6 +240,7 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
+    "django_mobile",
     "hotel",
     "mezzanine.boot",
     "mezzanine.conf",
@@ -266,6 +268,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.request",
     "django.core.context_processors.tz",
     "mezzanine.conf.context_processors.settings",
+    "django_mobile.context_processors.flavour",
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
@@ -289,6 +292,8 @@ MIDDLEWARE_CLASSES = (
     # "mezzanine.core.middleware.SSLRedirectMiddleware",
     "mezzanine.pages.middleware.PageMiddleware",
     "mezzanine.core.middleware.FetchFromCacheMiddleware",
+    "django_mobile.middleware.MobileDetectionMiddleware",
+    "django_mobile.middleware.SetFlavourMiddleware",
 )
 
 # Store these package names here as they may change in the future since
