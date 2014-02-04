@@ -77,6 +77,24 @@
 
 <div class="container">
 
+
+
+
+<!-- <h4>{% block title %}{% endblock %}</h4> -->
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+    <ul class="breadcrumb">
+
+    {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+  
+    </ul>
+
 {% nevercache %}
 {% if messages %}
 <div class="messages">
@@ -89,23 +107,6 @@
 </div>
 {% endif %}
 {% endnevercache %}
-
-
-<!-- <h4>{% block title %}{% endblock %}</h4> -->
-</div>
-
-
-
-
-<div class="row">
-    <div class="col-md-12">
-dsfsfsdfsdfsdfsdfsdf
-
-    <ul class="breadcrumb">
-
-    {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
-  
-    </ul>
 
     </div>
 </div>
