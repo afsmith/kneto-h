@@ -114,6 +114,23 @@
 <div class="container">
 <div class="row">
 
+{% if request.get_full_path = "/contact/" %}
+ <div class="container">  
+        <div class="row">  
+            <div class="col-md-5 left">
+                  {% include "pages/contact_map.html" %}                
+            </div>
+            <div class="col-md-7 right">
+                    {% block contact %}{% endblock %}                
+            </div>
+            
+
+        </div>
+    </div>
+ {% else %}
+
+
+
 <div class="col-md-2 left">
     {% block left_panel %}
     <div class="panel-kneto panel-default-kneto tree">{% page_menu "pages/menus/tree.html" %}</div>
@@ -123,8 +140,10 @@
 <div class="col-md-7 middle">
     {% block main %}{% endblock %}
 </div>
+{% endif %}
 
-<div class="col-md-3 right">
+
+<div class="col-md-3 right"> 
  <!--   {% nevercache %}
     {% include "includes/user_panel.html" %}
     {% endnevercache %} -->
@@ -145,6 +164,7 @@
 
 
 {% include "pages/menus/footer_k.html" %}
+
 
 {% include "includes/footer_scripts.html" %}
 
