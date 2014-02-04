@@ -87,15 +87,18 @@ a {
 }
 
 .trans-blue {
+    background-color: rgb(80, 139, 200);
     background-color: rgba(80, 139, 200, 0.7);
 }
 .trans-black {
+    background-color: rgb(000, 000, 000);
     background-color: rgba(000, 000, 000, 0.7);
 }
 
 .white-panel {
   background-color: rgb(255, 255, 255);
   border-width: 4px;
+  border-color: rgb(000, 000, 000);
   border-color: rgba(000, 000, 000, 0.7);
 }
 
