@@ -77,15 +77,12 @@
 <!-- <div class="panel greenline">
   </div> -->
 
- {% if flavour != "mobile" %}
-<section class="section1">
-{% endif %}
-  <div class="container">
+<div class="container bg_0">
      <div class="row">
       
-      <div class="col-md-8  col-xs-12 m-top">
+      <div class="col-md-8  m-top">
         <a style="display:block" href="#2">
-        <div class="panel trans-blue font-white fp-panel-t ">
+        <div class="panel trans-blue font-white fp-panel-t">
        
           <h2>{{ page.homepage.lefttop_header }}</h2>
             <ul class="list-unstyled lead">
@@ -101,7 +98,7 @@
       </div>
         
     
-      <div class="col-md-4 col-xs-12 m-top">
+      <div class="col-md-4 m-top">
         <div class="panel trans-black font-white fp-panel-t">
           <a class="font-white" style="display:block" href="#2.1">
           <h2>{{ page.homepage.righttop_header }}</h2>
@@ -115,7 +112,7 @@
 
       <div class="row"> 
         
-        <div class="col-md-5 col-xs-12">
+        <div class="col-md-5">
 
           <div class="panel trans-black font-white fp-panel-b">
             <a class="font-white" style="display:block" href="#3"> 
@@ -123,13 +120,13 @@
               <h5>{{ page.homepage.leftbottom_line1 }}</h5></a>
                 <a href="#2.1" class="glyphicon glyphicon-plus-sign fp-icon" role="button"></a>
                 <a class="pull-right" href="#3">
-                <img class="media-object" src="{% static "img/FP_3.png"  alt="Call list and graphs" %}"></a>
+                <img class="media-object img-responsive" src="{% static "img/FP_3.png"  alt="Call list and graphs" %}"></a>
         
           </div>
         </div>
         
 
-        <div class="col-md-3 col-xs-12">
+        <div class="col-md-3">
           <div class="panel white-panel fp-panel-b">
              
                    {% block blog_recent_posts %}
@@ -148,7 +145,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 col-xs-12">
+        <div class="col-md-4">
           <div class="panel trans-black font-white fp-panel-b">
             <h2>{{ page.homepage.rightbottom_header }}</h2>
               <div class="font-orange">
@@ -168,67 +165,50 @@
           </div>
         </div>
       </div>
-      </div>
- {% if flavour != "mobile" %}
-</section>
-{% endif %}
-
- {% if flavour != "mobile" %}
-<section class="section2" >
-{% endif %}
-
+</div>
+ 
+<div class="container bg_1">
   <div  class="row">
-    <div class="col-md-5 col-md-offset-2 col-xs-12">
-      <div class="fp-panel-2 kp">
+    <div class="col-md-5 col-md-offset-2">
+      <div class="kp">
         <h2>{{ page.homepage.section1_header }}</h2>
         {{ page.homepage.section1|richtext_filters|safe }}
    
       </div>
        <div id="2.1"></div>
     </div>
-
   </div>
- {% if flavour != "mobile" %}  
-</section>
-{% endif %}
+</div>
 
- {% if flavour != "mobile" %}
-<section class="section21">
-  {% endif %}
+<div class="container bg_2">
   <div  class="row">
-    <div class="col-md-5 col-md-offset-2 col-xs-12">
-      <div class="fp-panel-21 kp">
+    <div class="col-md-5 col-md-offset-2">
+      <div class="kp">
         <h2>{{ page.homepage.section2_header }}</h2>
             {{ page.homepage.section2|richtext_filters|safe }}
       </div>
       <div id="3"></div>
     </div>
   </div>
-   {% if flavour != "mobile" %}
-</section>
-{% endif %}
+</div>
 
- {% if flavour != "mobile" %}
-<section class="section3">
-  {% endif %}
-  <div class="row">
-    <div class="col-md-5 col-md-offset-2 col-xs-12">
-      <div class="fp-panel-3 kp">
+
+<div class="container "> <!-- need fixed image -->
+  <div class="row bg_3">
+    <div class="col-md-7 col-md-offset-2">  <!-- change back to 5 with fixed image -->
+      <div class="kp">
         <h2>{{ page.homepage.section3_header }}</h2>
             {{ page.homepage.section3|richtext_filters|safe }}
       </div>
       <div id="4"></div>
     </div>
   </div>
-   {% if flavour != "mobile" %}
-</section>
-{% endif %}
- {% if flavour != "mobile" %}
-<section class="section4">
-  {% endif %}
-  <div class="row">
-    <div class="col-md-5 col-md-offset-2 col-xs-12">
-      <div class="panel fp-panel-3 panel-why">
+</div>
+
+<div class="container">
+  <div class="row bg_3">
+    <div class="col-md-7 col-md-offset-2">
+      <div class="panel panel-why">
         <h2>{{ page.homepage.get_header }}</h2>
         <div class="panel-group" id="accordion">
   <div class="panel panel-default panel-why">
@@ -328,11 +308,12 @@
     </div>
    </div>
   </div>
+
       
 <!-- end of get -->
 
-<div class="row">
-    <div class="col-md-5 col-md-offset-2">
+  <div class="row bg_3">
+    <div class="col-md-7 col-md-offset-2">
       <div class="panel fp-panel-3 panel-why">
         <h2>{{ page.homepage.what_header }}</h2>
         <div class="panel-group" id="Whataccordion">
@@ -433,8 +414,8 @@
       
         </div>
       </div>
-
-
+  </div>
+</div>
 
 <!-- end of what -->
 
@@ -444,10 +425,6 @@
 
 
 
-</div>
- {% if flavour != "mobile" %}
-</section>
-{% endif %}
 
 
 

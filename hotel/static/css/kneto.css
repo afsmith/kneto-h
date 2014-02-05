@@ -1,4 +1,4 @@
- html,body,section{
+/* html,body,section{
   height:100% !important ; 
   overflow-y: scroll;
   overflow-x: hidden;
@@ -13,13 +13,16 @@ section{
   
 }
 
+*/
+
+body{
+  background:#E0E0E0;
+}
 
 .btn {
   vertical-align: bottom;
 }
-.min-h {
-  min-height: 1300px;
-}
+
 
 a {
     text-decoration: none !important;
@@ -54,6 +57,7 @@ a {
     color:rgb(255,128,0);
 }
 
+/*
 .section1{
   background-image:     url(../img/BG_front.jpg);
   max-height: 1264px;
@@ -79,16 +83,15 @@ a {
 
 .section4{
  background-image:    url(../img/Kneto_4.jpg); 
- /*max-height: 900px; 
- min-height: 500px; */
 }
+*/
 
 .navbar {
   margin-bottom: 0px;
 }
 
 .m-top {
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .trans-blue {
@@ -120,25 +123,35 @@ a {
   margin-bottom: 0px !important;
 }
 
+
 .fp-panel-t {
-  min-height: 280px;
+  min-height: 250px;
 }
 .fp-panel-b {
-  min-height: 360px;
+  min-height: 310px;
 }
 
-.fp-panel-2 {
-  min-height: 580px;
-}
-
-.fp-panel-21 {
-  min-height: 580px;
-}
-
-.fp-panel-3 {
- /* min-height: 340px;*/
-}
-
+ .bg_0 {
+    background: url("../img/BG_front.jpg") no-repeat center center;
+    background-size:100% auto;
+     
+ }
+ .bg_1 {
+    background: url("../img/Kneto_1.jpg") no-repeat center center;
+    background-size:100% auto;
+     
+ }
+ .bg_2 {
+    background: url("../img/Kneto_2.jpg") no-repeat center center;
+    background-size:100% auto;
+     
+ }
+ .bg_3 {
+   /* background: url("../img/Kneto_3.jpg") no-repeat center center;*/
+    background-color: #FFFFFF ;
+   /* background-size:100% auto; */
+   overflow: hidden;
+ }
 
 
 .panel {
@@ -161,7 +174,6 @@ a {
     color:rgb(80, 139, 200);
   }
 
-
 .panel-default {
   border-color: rgb(253, 253, 251) !important; 
 }
@@ -175,6 +187,7 @@ a {
   padding-bottom: 0px !important;
 }
 
+/*
 .col-md-4 {
     
     padding-right: 10px;
@@ -188,7 +201,7 @@ a {
     padding-left: 10px;
 }
 
-
+*/
 
 .font {
  
@@ -212,13 +225,6 @@ a {
     display: none;
 }
 
-.panel-kneto {
-    margin-bottom: 20px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid transparent;
-    border-radius: 4px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-}
 
 .fp-icon  {
     font-size: 3em;
@@ -230,7 +236,8 @@ a {
   text-align:right;
   padding-top:15px;
 }
-.foot_right_block .fright {margin-left:20px;
+.foot_right_block .fright {
+  margin-left:20px;
 }
 
 
@@ -268,5 +275,6 @@ a {
   float: right !important;
 
 }
-/*css reset*/
+/*css reset
 html,body{margin:0 !important; padding:0 !important;}
+*/
