@@ -77,7 +77,11 @@
 <!-- <div class="panel greenline">
   </div> -->
 
+  {% if flavour = "mobile" %}
+  <div class="container bg_mobile">
+  {% else %}
 <div class="container bg_0">
+  {% endif %}
      <div class="row">
       
       <div class="col-md-8  m-top">
@@ -167,7 +171,12 @@
       </div>
 </div>
  
+  {% if flavour = "mobile" %}
+ <div class="container bg_mobile">
+  {% else %}
 <div class="container bg_1">
+  {% endif %}
+
   <div  class="row">
     <div class="col-md-5 col-md-offset-2">
       <div class="kp">
@@ -180,7 +189,12 @@
   </div>
 </div>
 
+
+ {% if flavour = "mobile" %}
+  <div class="container bg_mobile">
+    {% else%}
 <div class="container bg_2">
+    {% endif %}
   <div  class="row">
     <div class="col-md-5 col-md-offset-2">
       <div class="kp">
