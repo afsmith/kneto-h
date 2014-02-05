@@ -205,10 +205,13 @@
   </div>
 </div>
 
-
-<div class="container bg_3"> <!-- need fixed image -->
+  {% if flavour = "mobile" %}
+<div class="container bg_mobile">
+  {% else %}
+<div class="container bg_3">
+  {% endif %} 
   <div class="row">
-    <div class="col-md-8">  <!-- change back to 5 with fixed image -->
+    <div class="col-md-8">  
       <div class="kp">
         <h2>{{ page.homepage.section3_header }}</h2>
             {{ page.homepage.section3|richtext_filters|safe }}
