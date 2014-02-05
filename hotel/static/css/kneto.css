@@ -35,6 +35,10 @@ a {
   margin: 10px ;
 }
 
+.ki {
+  max-height: 175px;
+}
+
 .bottomaligned {
     position:absolute; bottom:0;  
     margin-bottom:25px;
