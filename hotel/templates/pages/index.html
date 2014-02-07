@@ -49,7 +49,8 @@
 {% block extra_head %}{% endblock %}
 </head>
 
-<body id="{% block body_id %}body{% endblock %}">
+<body id="{% block body_id %}body{% endblock %}" class="index-bg">
+
 
 <div class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
 <div class="container">
@@ -224,97 +225,97 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <div class="panel panel-why">
+      <div class="panel panel-why panel-body-k">
         <h2>{{ page.homepage.get_header }}</h2>
         <div class="panel-group" id="accordion">
-  <div class="panel panel-default panel-why">
-    <div class="panel-heading">
-      <h4 class="panel-title">
+  <div class="panel panel-default panel-why panel-body-k">
+    <div class="panel-heading panel-body-k">
+      <h4 class="panel-title panel-body-k">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
           {{ page.homepage.get_header1 }}
           <br><small>Learn More</small>
         </a>
       </h4>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse in">
-      <div class="panel-body">
+    <div id="collapseOne" class="panel-collapse collapse in panel-body-k">
+      <div class="panel-body panel-body-k">
           {{ page.homepage.get_text1|richtext_filters|safe }}
       </div>
     </div>
   </div>
-  <div class="panel panel-default panel-why">
-    <div class="panel-heading">
-      <h4 class="panel-title">
+  <div class="panel panel-default panel-why  panel-body-k">
+    <div class="panel-heading panel-body-k">
+      <h4 class="panel-title panel-body-k">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
           {{ page.homepage.get_header2 }}
           <br><small>Learn More</small>
         </a>
       </h4>
     </div>
-    <div id="collapseTwo" class="panel-collapse collapse">
-      <div class="panel-body">
+    <div id="collapseTwo" class="panel-collapse collapse panel-body-k">
+      <div class="panel-body panel-body-k">
         {{ page.homepage.get_text2|richtext_filters|safe }}
       </div>
     </div>
   </div>
-  <div class="panel panel-default panel-why">
-    <div class="panel-heading">
-      <h4 class="panel-title">
+  <div class="panel panel-default panel-why panel-body-k">
+    <div class="panel-heading panel-body-k">
+      <h4 class="panel-title panel-body-k">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
            {{ page.homepage.get_header3 }}
            <br><small>Learn More</small>
         </a>
       </h4>
     </div>
-    <div id="collapseThree" class="panel-collapse collapse">
-      <div class="panel-body">
+    <div id="collapseThree" class="panel-collapse collapse panel-body-k">
+      <div class="panel-body panel-body-k">
           {{ page.homepage.get_text3|richtext_filters|safe }}
       </div>
     </div>
   </div>
 
-  <div class="panel panel-default panel-why">
-    <div class="panel-heading">
-      <h4 class="panel-title">
+  <div class="panel panel-default panel-why panel-body-k">
+    <div class="panel-heading panel-body-k">
+      <h4 class="panel-title panel-body-k">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
           {{ page.homepage.get_header4|richtext_filters|safe }}
           <br><small>Learn More</small>
         </a>
       </h4>
     </div>
-    <div id="collapseFour" class="panel-collapse collapse">
-      <div class="panel-body">
+    <div id="collapseFour" class="panel-collapse collapse panel-body-k">
+      <div class="panel-body panel-body-k">
           {{ page.homepage.get_text4|richtext_filters|safe }}
       </div>
     </div>
   </div>
-  <div class="panel panel-default panel-why">
-    <div class="panel-heading">
-      <h4 class="panel-title">
+  <div class="panel panel-default panel-why panel-body-k">
+    <div class="panel-heading panel-body-k">
+      <h4 class="panel-title panel-body-k">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
           {{ page.homepage.get_header5 }}
           <br><small>Learn More</small>
         </a>
       </h4>
     </div>
-    <div id="collapseFive" class="panel-collapse collapse">
-      <div class="panel-body">
+    <div id="collapseFive" class="panel-collapse collapse panel-body-k">
+      <div class="panel-body panel-body-k">
           {{ page.homepage.get_text5|richtext_filters|safe }}
       </div>
     </div>
   </div>
 
-  <div class="panel panel-default panel-why">
-    <div class="panel-heading">
-      <h4 class="panel-title">
+  <div class="panel panel-default panel-why panel-body-k">
+    <div class="panel-heading panel-body-k">
+      <h4 class="panel-title panel-body-k">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
           {{ page.homepage.get_header6 }}
           <br><small>Learn More</small>
         </a>
       </h4>
     </div>
-    <div id="collapseSix" class="panel-collapse collapse">
-      <div class="panel-body">
+    <div id="collapseSix" class="panel-collapse collapse panel-body-k">
+      <div class="panel-body panel-body-k">
           {{ page.homepage.get_text6|richtext_filters|safe }}
       </div>
     </div>
@@ -330,97 +331,97 @@
 
   <div class="row">
     <div class="col-md-8">
-      <div class="panel fp-panel-3 panel-why">
+      <div class="panel fp-panel-3 panel-why panel-body-k">
         <h2>{{ page.homepage.what_header }}</h2>
         <div class="panel-group" id="Whataccordion">
-  <div class="panel panel-default panel-why">
-    <div class="panel-heading">
-      <h4 class="panel-title">
+  <div class="panel panel-default panel-why panel-body-k">
+    <div class="panel-heading panel-body-k">
+      <h4 class="panel-title panel-body-k">
         <a data-toggle="collapse" data-parent="#Whataccordion" href="#WhatcollapseOne">
           {{ page.homepage.what_header1 }}
           <br><small>Learn More</small>
         </a>
       </h4>
     </div>
-    <div id="WhatcollapseOne" class="panel-collapse collapse">
-      <div class="panel-body">
+    <div id="WhatcollapseOne" class="panel-collapse collapse panel-body-k">
+      <div class="panel-body panel-body-k">
           {{ page.homepage.what_text1|richtext_filters|safe }}
       </div>
     </div>
   </div>
-  <div class="panel panel-default panel-why">
-    <div class="panel-heading">
-      <h4 class="panel-title">
+  <div class="panel panel-default panel-why panel-body-k">
+    <div class="panel-heading panel-body-k">
+      <h4 class="panel-title panel-body-k">
         <a data-toggle="collapse" data-parent="#Whataccordion" href="#WhatcollapseTwo">
           {{ page.homepage.what_header2 }}
           <br><small>Learn More</small>
         </a>
       </h4>
     </div>
-    <div id="WhatcollapseTwo" class="panel-collapse collapse">
-      <div class="panel-body">
+    <div id="WhatcollapseTwo" class="panel-collapse collapse panel-body-k">
+      <div class="panel-body panel-body-k">
         {{ page.homepage.what_text2|richtext_filters|safe }}
       </div>
     </div>
   </div>
-  <div class="panel panel-default panel-why">
-    <div class="panel-heading">
-      <h4 class="panel-title">
+  <div class="panel panel-default panel-why panel-body-k">
+    <div class="panel-heading panel-body-k">
+      <h4 class="panel-title panel-body-k">
         <a data-toggle="collapse" data-parent="#Whataccordion" href="#WhatcollapseThree">
            {{ page.homepage.what_header3 }}
            <br><small>Learn More</small>
         </a>
       </h4>
     </div>
-    <div id="WhatcollapseThree" class="panel-collapse collapse">
-      <div class="panel-body">
+    <div id="WhatcollapseThree" class="panel-collapse collapse panel-body-k">
+      <div class="panel-body panel-body-k">
           {{ page.homepage.what_text3|richtext_filters|safe }}
       </div>
     </div>
   </div>
 
-      <div class="panel panel-default panel-why">
-    <div class="panel-heading">
-      <h4 class="panel-title">
+      <div class="panel panel-default panel-why panel-body-k">
+    <div class="panel-heading panel-body-k">
+      <h4 class="panel-title panel-body-k">
         <a data-toggle="collapse" data-parent="#Whataccordion" href="#WhatcollapseFour">
           {{ page.homepage.what_header4 }}
           <br><small>Learn More</small>
         </a>
       </h4>
     </div>
-    <div id="WhatcollapseFour" class="panel-collapse collapse">
-      <div class="panel-body">
+    <div id="WhatcollapseFour" class="panel-collapse collapse panel-body-k">
+      <div class="panel-body panel-body-k">
           {{ page.homepage.what_text4|richtext_filters|safe }}
       </div>
     </div>
   </div>
-    <div class="panel panel-default panel-why">
-    <div class="panel-heading">
-      <h4 class="panel-title">
+    <div class="panel panel-default panel-why panel-body-k">
+    <div class="panel-heading panel-body-k">
+      <h4 class="panel-title panel-body-k">
         <a data-toggle="collapse" data-parent="#Whataccordion" href="#WhatcollapseFive">
           {{ page.homepage.what_header5 }}
           <br><small>Learn More</small>
         </a>
       </h4>
     </div>
-    <div id="WhatcollapseFive" class="panel-collapse collapse">
-      <div class="panel-body">
+    <div id="WhatcollapseFive" class="panel-collapse collapse panel-body-k">
+      <div class="panel-body panel-body-k">
           {{ page.homepage.what_text5|richtext_filters|safe }}
       </div>
     </div>
   </div>
 
-      <div class="panel panel-default panel-why">
-    <div class="panel-heading">
-      <h4 class="panel-title">
+      <div class="panel panel-default panel-why panel-body-k">
+    <div class="panel-heading panel-body-k">
+      <h4 class="panel-title panel-body-k">
         <a data-toggle="collapse" data-parent="#Whataccordion" href="#WhatcollapseSix">
           {{ page.homepage.what_header6 }}
           <br><small>Learn More</small>
         </a>
       </h4>
     </div>
-    <div id="WhatcollapseSix" class="panel-collapse collapse">
-      <div class="panel-body">
+    <div id="WhatcollapseSix" class="panel-collapse collapse panel-body-k">
+      <div class="panel-body panel-body-k">
           {{ page.homepage.what_text6|richtext_filters|safe }}
       </div>
     </div>

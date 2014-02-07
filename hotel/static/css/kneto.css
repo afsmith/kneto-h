@@ -15,6 +15,9 @@ section{
 
 */
 
+.index-bg {
+  background-color: #FFFFFF ;
+}
 
 .btn {
   vertical-align: bottom;
@@ -111,6 +114,11 @@ a {
   border-color: rgba(000, 000, 000, 0.7);
 }
 
+.panel-body-k {
+    padding: 0px !important;
+    padding-bottom:5px !important;
+}
+
 .breadcrumb {
   background:#65912f;
   border-radius: 0px;
@@ -171,7 +179,7 @@ a {
 
 .panel-heading  {
     background-image: none !important;
-    background-color: rgb(253, 253, 251) !important;
+    background-color: rgb(255, 255, 255) !important;
   }
 
 .panel-heading small  {
@@ -183,7 +191,7 @@ a {
 }
 
 .panel-why {
-  background-color: rgb(253, 253, 251) !important;
+  background-color: rgb(255, 255, 255) !important;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.00) !important;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
