@@ -16,7 +16,7 @@ section{
 */
 
 .index-bg {
-  background-color: #FFFFFF ;
+  background-color: #202020 ;
 }
 
 .btn {
@@ -112,6 +112,10 @@ a {
   border-width: 4px;
   border-color: rgb(000, 000, 000);
   border-color: rgba(000, 000, 000, 0.7);
+}
+
+.black-bg {
+  background-color: rgb(000, 000, 000);
 }
 
 .panel-body-k {
