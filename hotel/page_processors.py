@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from templated_email import send_templated_mail
 from mezzanine.pages.page_processors import processor_for
 from .models import HomePage, HomePageContact
-#import pygeoip
+import pygeoip
 
 
 class HomePageForm(ModelForm):
@@ -26,13 +26,13 @@ def sign_up(request, page):
        form = HomePageForm(request.POST)
        if form.is_valid():
            ip = request.META.get('REMOTE_ADDR', None)
- # add later          gi4 = pygeoip.GeoIP(settings.GEO_DATA, pygeoip.STANDARD)
- #         county = gi4.country_name_by_addr(ip)
+           gi4 = pygeoip.GeoIP(settings.GEO_DATA, pygeoip.STANDARD)
+           county = gi4.country_name_by_addr(ip)
            homeForm = form.save(commit=False)
            # Form processing goes here.
            homeForm.date = datetime.now()
            homeForm.ip = ip
- #          homeForm.county = county
+           homeForm.county = county
            homeForm.form_name = 'HomePageForm'
            homeForm.save()
            send_templated_mail(

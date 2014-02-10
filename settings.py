@@ -342,7 +342,7 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 #     "SECRET_KEY": SECRET_KEY,
 #     "NEVERCACHE_KEY": NEVERCACHE_KEY,
 # }
-
+GEO_DATA= 'geodata/GeoIP.dat'
 
 ##################
 # LOCAL SETTINGS #
