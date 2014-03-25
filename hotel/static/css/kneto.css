@@ -164,6 +164,11 @@ a {
    background-size:100% auto;
  }
 
+ .bg_5 {
+   background: url("../img/Kneto_5.png") no-repeat center center;
+   background-size:100% auto;
+   }
+
  .bg_mobile {
     background-color: #FFFFFF ;
     overflow: hidden;
