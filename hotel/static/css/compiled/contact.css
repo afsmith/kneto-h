@@ -1,33 +1,33 @@
-#contact {
+.contact_wrapper {
   margin-top: 70px;
 }
-#contact .contact {
+.contact_wrapper .contact {
   margin: 40px 0 100px 0;
 }
-#contact .contact p {
+.contact_wrapper .contact p {
   color: #939394;
   font-size: 19px;
   margin-bottom: 47px;
   font-style: italic;
   line-height: 24px;
 }
-#contact .contact form {
+.contact_wrapper .contact form {
   margin: 0;
 }
-#contact .contact .submit {
+.contact_wrapper .contact .submit {
   margin: 0;
 }
-#contact .contact .submit .box {
+.contact_wrapper .contact .submit .box {
   margin: 0;
 }
-#contact .contact .submit label.checkbox {
+.contact_wrapper .contact .submit label.checkbox {
   color: #394350;
   font-style: 14px;
 }
-#contact .contact .submit .right {
+.contact_wrapper .contact .submit .right {
   float: right;
 }
-#contact .contact .submit .right input[type="submit"] {
+.contact_wrapper .contact .submit .right input[type="submit"] {
   float: right;
   text-transform: uppercase;
   color: #fff;
@@ -41,48 +41,51 @@
   -o-transition: background linear .2s, box-shadow linear .2s;
   transition: background linear .2s, box-shadow linear .2s;
 }
-#contact .contact .submit .right input[type="submit"]:hover {
+.contact_wrapper .contact .submit .right input[type="submit"]:hover {
   background: #252528;
 }
-#contact .form {
+.contact_wrapper .form {
   margin: 0;
 }
-#contact .form .row-col {
+.contact_wrapper .form .row-col {
   padding-left: 0;
 }
-#contact .form .box {
+.contact_wrapper .form .box {
   margin: 0;
 }
-#contact .form .box input[type="text"] {
+.contact_wrapper .form .box input[type="text"] {
   padding-left: 39px;
   margin-bottom: 10px;
   color: black;
   height: 39px;
   border-radius: 3px;
 }
-#contact .form .box input.name {
+.contact_wrapper .form .box input.name {
   background: url("../../img/formname.png") white no-repeat 5px;
 }
-#contact .form .box input.mail {
+.contact_wrapper .form .box input.mail {
   background: url("../../img/formmail.png") white no-repeat 5px;
 }
-#contact .form .box input.phone {
+.contact_wrapper .form .box input.phone {
   background: url("../../img/formphone.png") white no-repeat 5px;
 }
-#contact .form .box textarea {
+.contact_wrapper .form .box textarea {
   padding: 11px;
   margin: 0;
   border-radius: 3px;
   height: 139px;
 }
-#contact .map {
+.contact_wrapper .map {
   margin: 0;
   position: relative;
 }
-#contact .map iframe {
+.contact_wrapper .map .container {
+  position: relative;
+}
+.contact_wrapper .map iframe {
   display: block;
 }
-#contact .map .box_wrapp {
+.contact_wrapper .map .box_wrapp {
   width: 400px;
   position: absolute;
   margin: 0;
@@ -91,17 +94,18 @@
   background: white;
   top: 30px;
   border-radius: 4px;
+  right: 0;
 }
-#contact .map .box_wrapp .box_cont {
+.contact_wrapper .map .box_wrapp .box_cont {
   margin: 0 auto;
   width: 76%;
 }
-#contact .map .box_wrapp .head {
+.contact_wrapper .map .box_wrapp .head {
   width: 100%;
   margin-bottom: 17px;
   overflow: hidden;
 }
-#contact .map .box_wrapp .head h6 {
+.contact_wrapper .map .box_wrapp .head h6 {
   font-size: 24px;
   margin: 0;
   font-style: italic;
@@ -110,51 +114,51 @@
   border-bottom: 1px solid;
   font-weight: normal;
 }
-#contact .map .box_wrapp ul.street {
+.contact_wrapper .map .box_wrapp ul.street {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#contact .map .box_wrapp ul.street li {
+.contact_wrapper .map .box_wrapp ul.street li {
   color: #777777;
   font-size: 14px;
 }
-#contact .map .box_wrapp ul.street li.icon {
+.contact_wrapper .map .box_wrapp ul.street li.icon {
   margin-top: 3px;
 }
-#contact .map .box_wrapp ul.street li.icon span.ico1 {
+.contact_wrapper .map .box_wrapp ul.street li.icon span.ico1 {
   float: left;
   height: 20px;
 }
-#contact .map .box_wrapp ul.street li.icon span.ico2 {
+.contact_wrapper .map .box_wrapp ul.street li.icon span.ico2 {
   float: left;
   height: 20px;
   background-position: 0px -23px;
 }
-#contact .map .box_wrapp ul.street li.icon .text {
+.contact_wrapper .map .box_wrapp ul.street li.icon .text {
   font-size: 15px;
   color: #777777;
   margin-left: 6px;
 }
-#contact .map .box_wrapp ul.street li.icon a:hover {
+.contact_wrapper .map .box_wrapp ul.street li.icon a:hover {
   color: #187CCC;
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
   -ms-transition: all .2s;
   transition: all .2s;
 }
-#contact .map .box_wrapp ul.street li.icontop {
+.contact_wrapper .map .box_wrapp ul.street li.icontop {
   margin-top: 13px;
 }
-#contact .map .box_wrapp .headbottom {
+.contact_wrapper .map .box_wrapp .headbottom {
   margin-top: 42px;
 }
-#contact .map .box_wrapp p {
+.contact_wrapper .map .box_wrapp p {
   color: #777777;
   font-size: 14px;
   margin-bottom: 32px;
 }
-#contact .map .box_wrapp a.btn {
+.contact_wrapper .map .box_wrapp a.btn {
   text-transform: uppercase;
   color: #fff;
   font-size: 15px;
@@ -173,7 +177,7 @@
   -o-transition: background linear .2s, box-shadow linear .2s;
   transition: background linear .2s, box-shadow linear .2s;
 }
-#contact .map .box_wrapp a.btn:hover {
+.contact_wrapper .map .box_wrapp a.btn:hover {
   background: #252528;
 }
 
@@ -186,36 +190,36 @@
 /* Responsive
 -------------------------------------------------- */
 @media (max-width: 767px) {
-  #contact .contact .submit .box {
+  .contact_wrapper .contact .submit .box {
     margin: 10px 0 24px;
   }
-  #contact .contact .submit .right {
+  .contact_wrapper .contact .submit .right {
     float: none;
   }
-  #contact .contact .submit .right input[type="submit"] {
+  .contact_wrapper .contact .submit .right input[type="submit"] {
     margin: 0 auto;
     float: none;
     width: 53%;
     display: block;
     padding: 7px;
   }
-  #contact .map .box_wrapp {
+  .contact_wrapper .map .box_wrapp {
     width: 90%;
     position: relative;
     margin: 0 auto 80px;
   }
-  #contact .map .box_wrapp a.btn {
+  .contact_wrapper .map .box_wrapp a.btn {
     width: 65%;
   }
-  #contact .map iframe {
+  .contact_wrapper .map iframe {
     display: none;
   }
 }
 @media (max-width: 480px) {
-  #contact .contact .submit .right input[type="submit"] {
+  .contact_wrapper .contact .submit .right input[type="submit"] {
     width: 60%;
   }
-  #contact .map .box_wrapp {
+  .contact_wrapper .map .box_wrapp {
     width: 100%;
   }
 }

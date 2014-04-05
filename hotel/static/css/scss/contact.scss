@@ -1,4 +1,4 @@
-#contact {
+.contact_wrapper {
 	margin-top: 70px;
 
 	.contact {
@@ -99,6 +99,11 @@
 	.map {
 		margin: 0;
 		position: relative;
+
+    .container {
+      position: relative;
+    }
+
 		iframe {
 			display: block;
 		}
@@ -112,6 +117,7 @@
 			background: white;
 			top: 30px;
 			border-radius: 4px;
+      right: 0;
 
 			.box_cont {
 				margin: 0 auto;
@@ -233,7 +239,7 @@
 -------------------------------------------------- */
 
 @media (max-width: 767px) {	
-	#contact {
+	.contact_wrapper {
 		.contact {
 			.submit {
 				.box {
@@ -285,7 +291,7 @@
 }
 
 @media (max-width: 480px) {
-	#contact {
+	.contact_wrapper {
 		.contact {
 			.submit {
 				.right {

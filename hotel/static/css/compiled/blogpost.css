@@ -17,7 +17,7 @@
 }
 #blog_post .post_content {
   margin-top: 40px;
-  padding-bottom: 90px;
+  padding-bottom: 50px;
   border-bottom: 1px solid #cacaca;
   box-shadow: 0px 1px 0px 0px white;
 }
@@ -39,7 +39,7 @@
   margin-bottom: 15px;
 }
 #blog_post .post_content .author_box {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 #blog_post .post_content .author_box .author {
   margin-top: 45px;
@@ -52,6 +52,9 @@
   font-style: italic;
   margin-top: 5px;
   color: #9C9C9C;
+}
+#blog_post .post_content .share_buttons {
+  margin-top: 20px;
 }
 #blog_post .comments {
   margin-top: 3px;

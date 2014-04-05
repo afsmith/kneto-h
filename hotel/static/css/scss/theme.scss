@@ -63,7 +63,7 @@ header {
 		.nav {
 			>li {
 				>a {
-					font-size: 13px;
+					font-size: 15px;
 				    font-weight: bold;
 				    color: #fff;
 				    text-shadow: 0 1px 0 rgba(0,0,0,.5);
@@ -72,13 +72,14 @@ header {
 				    -webkit-transition: all .2s linear;
 				    -moz-transition: all .2s linear;
 				    transition: all .2s linear;
-				    padding: 10px 15px 10px;
+				    padding: 16px 15px 10px;
 				    text-decoration: none;
+            text-transform: uppercase;
 
 				    &:hover, &:active {
-						color: #fff;
-						opacity: 1;
-						filter: alpha(opacity=100);
+  						color: #fff;
+  						opacity: 1;
+  						filter: alpha(opacity=100);
 				    }
 				}
 
@@ -170,8 +171,8 @@ header {
 /* Footer
 -------------------------------------------------- */
 #footer {
-	min-height: 260px;
-	margin-top: 140px;
+	min-height: 200px;
+	margin-top: 80px;
 	background-color: #252528;
 	color: #fff;
 	padding-top: 35px;
@@ -318,7 +319,7 @@ header {
 	/* credits */
 	.credits {
 		border-top: 1px solid #343437;
-		padding: 10px 0px 60px 0px;
+		padding: 10px 0px 30px 0px;
 
 		.social {
 			margin-top: 30px;
@@ -380,6 +381,12 @@ header {
 				}
 			}
 		}
+    
+    .foot_logo {
+      width: 190px;
+      display: block;
+      margin: 0 auto;
+    }
 
 		.copyright {
 			color: #a6a6a7;
