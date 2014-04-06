@@ -15,12 +15,6 @@
 {{ page.description }}
 {% endmetablock %}{% endblock %}
 
-{% block title %}
-{% editable page.title %}{{ page.title }}{% endeditable %}
-{% endblock %}
-
-
-
 {% block main %}
 
     {% if request.get_full_path = "/contact/" or request.get_full_path = "/contact/?sent=1" %}

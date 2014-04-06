@@ -1,72 +1,27 @@
 {% load i18n future pages_tags staticfiles %}
 
-<!-- starts footer -->
 <footer id="footer">
     <div class="container">
         <div class="row sections">
-            <!--div class="col-sm-4 recent_posts">
-                <h3 class="footer_header">
-                    Recent Posts
-                </h3>
-                <div class="post">
-                    <a href="blogpost.html">
-                        <img src="img/recent_post1.png" class="img-circle" />
-                    </a>
-                    <div class="date">
-                        Wed, 12 Dec
-                    </div>
-                    <a href="blogpost.html" class="title">
-                        Randomised words which don't look embarrasing hidden.
-                    </a>
-                </div>
-                <div class="post">
-                    <a href="blogpost.html">
-                        <img src="img/recent_post2.png" class="img-circle" />
-                    </a>
-                    <div class="date">
-                        Mon, 12 Dec
-                    </div>
-                    <a href="blogpost.html" class="title">
-                        Randomised words which don't look embarrasing hidden.
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-4 testimonials">
-                <h3 class="footer_header">
-                    Testimonials
-                </h3>
-                <div class="wrapper">
-                    <div class="quote">
-                        <span>“</span>
-                        There are many variations of passages of randomised words which don't look even slightly believable. You need to be sure there isn't anything embarrassing of text.
-                        <span></span>
-                    </div>
-                    <div class="author">
-                        <img src="img/user-display.png" />
-                        <div class="name">Alejandra Galvan Castillo</div>
-                        <div class="info">
-                            Details Canvas
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 contact">
-                <h3 class="footer_header">
-                    Contact
-                </h3>
-                <form action="#" method="post">
-                    <input type="text" placeholder="Your name" />
-                    <input type="text" placeholder="Your email" />
-                    <textarea rows="3" placeholder="Message"></textarea>
-                    <input type="submit" value="Send" />
-                </form>
-            </div-->
+            <ul class="footer_nav">
+                {% for page in page_branch %}
+                    {% if page.in_menu %}
+                        <li {% if page.is_current_or_ascendant %}class="active"{% endif %}
+                            id="footer-menu-{{ page.html_id }}">
+                            <a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                <li><a href="http://kneto.com/privacy-policy/" title="Kneto privacy policy">Privacy Policy</a></li>
+                <li><a href="http://kneto.com/terms-of-service/" title="Kneto privacy policy">Terms of Services</a></li>
+            </ul>
         </div>
         <div class="row credits">
             <div class="col-md-12">
-                <div class="foot_logo"><a href="/"><img src="{% static "img/kneto_logo_grey.png" alt="" / %} "></a></div>
                 <div class="row copyright">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
+                        <a href="/"><img src="{% static "img/kneto_logo_grey.png" alt="" / %} "></a>
+                    </div>
+                    <div class="col-md-6">
                         &copy; 2014 Kneto. All rights reserved.
                     </div>
                 </div>
@@ -74,53 +29,3 @@
         </div>
     </div>
 </footer>
-
-{% comment %}
-    
-
-
-{% spaceless %}
-{% if page_branch_in_menu %}
-
-{% for page in page_branch %}
-    {% if page.is_primary %}
-        {% if forloop.first %}
-            <div class="nav-footer">
-        {% endif %}
-        {% if page.in_menu %}
-            <ul class="list-unstyled">
-        {% endif %}
-    {% endif %}
-
-    {% if page.in_menu %}
-        {% if forloop.first and not page.parent.in_menu and not page.is_primary %}
-            <ul class="list-unstyled">
-        {% endif %}
-        <li {% if page.is_current_or_ascendant %}class="active"{% endif %}
-            id="footer-menu-{{ page.html_id }}">
-            <a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
-    {% endif %}
-
-    
-
-    {% if page.in_menu %}
-        {% if forloop.first and not page.parent.in_menu and not page.is_primary %}
-            </li></ul>
-        {% endif %}
-    {% endif %}
-
-    {% if page.is_primary %}
-        {% if page.in_menu %}
-            </ul>
-        {% endif %}
-        {% if forloop.last %}
-            </div>
-        {% endif %}
-    {% endif %}
-
-{% endfor %}
-
-{% endif %}
-{% endspaceless %}
-
-{% endcomment %}

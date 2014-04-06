@@ -35,7 +35,7 @@ textarea {
 
 body {
 	&.pull_top {
-    	padding-top: 0px !important;
+    	padding-top: 0px;
 	}
 }
 header {
@@ -151,6 +151,17 @@ header {
 	}
 }
 
+#signup_wrapper {
+  background: #eee;
+  text-align: center;
+  padding: 20px 0;
+
+  #id_email {
+    width: 230px;
+    display: inline-block;
+  }
+}
+
 .section_header {
 	width: 100%;
 	margin-bottom: 60px;
@@ -210,6 +221,23 @@ header {
 			}
 		}
 	}
+
+  .footer_nav {
+    width: 100%;
+    height: 30px;
+    display: table;
+    list-style: none;
+
+    li {
+      display: table-cell;
+      padding: 5px 10px;
+      text-align: center;
+
+      a {
+        color: #ccc;
+      }
+    }
+  }
 
 	/* testimonials */
 	.testimonials {
@@ -479,7 +507,7 @@ header {
 -------------------------------------------------- */
 
 @media (max-width: 991px) {
-	body { padding-top: 0 !important; }
+	body { padding-top: 0px !important; }
 	
 	.navbar {
 		&.navbar-inverse {
