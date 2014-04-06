@@ -1,4 +1,4 @@
-#blog{
+.blog_wrapper{
 	margin-top: 70px;
 
 	.header {
@@ -193,7 +193,7 @@
 -------------------------------------------------- */
 
 @media (min-width: 768px) and (max-width: 979px) {
-	#blog {
+	.blog_wrapper {
 		.pagination {
 			width: 36%;
 		}
@@ -205,7 +205,7 @@
 }
 
 @media (max-width: 767px) {
-	#blog {
+	.blog_wrapper {
 
 		.section_header {
 			input[type="text"] {
@@ -268,7 +268,7 @@
 }
 
 @media (max-width: 480px) {
-	#blog {
+	.blog_wrapper {
 		.post_row {
 			height: auto;
 			margin-bottom: 0px;
