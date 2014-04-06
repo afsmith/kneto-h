@@ -64,9 +64,12 @@
         <p>{{ page.homepage.rightbottom_line1 }}</p>
         
         {% errors_for form %}
-        <form class="mezzanine-form form-inline" method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>{% csrf_token %}
+        <form class="mezzanine-form form-inline" method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+            <input type="hidden" name="referrer" value="">
+            {% csrf_token %}
             
                 <input id="id_email" maxlength="75" name="email" type="email" class="input-lg form-control" placeholder="Enter your email here">
+                <input id="id_form_name" name="form_name" type="hidden" value="NUL" />
             <input  class="btn btn-lg btn-primary" type="submit" value="Go">
         </form>
         </div>
