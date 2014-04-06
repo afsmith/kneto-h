@@ -295,7 +295,7 @@
 }
 #features .feature .info h3 {
   font-size: 21px;
-  margin-top: 45px;
+  margin-top: 0;
 }
 #features .feature .info h3 img {
   margin-right: 18px;

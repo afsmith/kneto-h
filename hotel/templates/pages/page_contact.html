@@ -16,8 +16,6 @@
                     {{ page.form.response|richtext_filters|safe }}
                 {% endeditable %}
             {% else %}
-                <p>We’d love to hear from you. Interested in working together? Fill out the form and we will get back to you as soon as we can. Please allow a couple days for us to respond.</p>
-
                 {% with page.form as page_form %}
                 {% editable page_form.content %}
                     {{ page_form.content|richtext_filters|safe }}
