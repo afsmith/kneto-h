@@ -14,13 +14,14 @@
     <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
     {% endifinstalled %}
 
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
+
     {% compress css %}
         <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
         <link rel="stylesheet" href="{% static "css/bootstrap/bootstrap.min.css" %}" />
         <link rel="stylesheet" href="{% static "css/compiled/bootstrap-overrides.css" %}" />
         <link rel="stylesheet" href="{% static "css/compiled/theme.css" %}" />
 
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
 
         <link rel="stylesheet" href="{% static "css/compiled/index.css" %}" type="text/css" media="screen" />    
         <link rel="stylesheet" type="text/css" href="{% static "css/lib/animate.css" %}" media="screen, projection" />    
