@@ -126,6 +126,9 @@ header {
   text-align: center;
   padding: 20px 0;
 }
+#signup_wrapper h2 {
+  margin-top: 0;
+}
 #signup_wrapper #id_email {
   width: 230px;
   display: inline-block;
