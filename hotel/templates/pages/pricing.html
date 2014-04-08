@@ -1,0 +1,174 @@
+{% extends "pages/page.html" %}
+{% load staticfiles %}
+
+{% block extra_css %}
+     <link rel="stylesheet" href="{% static "css/compiled/pricing.css" type="text/css" media="screen" /> %}"
+     <link rel="stylesheet" type="text/css" href="{% static "css/lib/animate.css"%}" media="screen, projection" /> 
+{% endblock %}
+
+{% block main %}
+  
+    <!-- Pricing Option 1 -->
+    <div id="in_pricing">
+        <div class="container">
+            <div class="head">
+                <h3>Try Kneto free for 15 days.</h3>
+                <h3></h3>
+            </div>
+
+            <div class="row charts_wrapp">
+                <!-- Plan Box -->
+                <div class="col-sm-4">
+                    <div class="plan">
+                        <div class="wrapper">
+                            <h3>Single User</h3>
+                            <div class="price">
+                                <span class="dollar">€</span> 
+                                <span class="qty">19,99</span> 
+                                <span class="month">/month</span>
+                            </div>
+                            <div class="features">
+                                <p>
+                                    <strong>1</strong>
+                                    user
+                                </p>
+                                <p>
+                                    <strong>15</strong>
+                                    day trial
+                                </p>
+                                <p>
+                                    <strong>Send as many offers as you like</strong>
+                                </p>
+                                <p>
+                                    <strong>Full page level analytics</strong>
+                                </p>
+                                <p>
+                                    <strong>Email opened notifications</strong>
+
+                                </p>
+                            </div>
+                            <a class="order" href="https://cc.kneto.com/accounts/register/">ORDER NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plan Box -->
+                <div class="col-sm-4 pro">
+                    <div class="plan">
+                        <div class="wrapper">
+                            <img class="ribbon" src="{% static "img/badge.png" %}" >
+                            <h3>Early Access</h3>
+                            <h5>small plan</h5>
+                            <div class="price">
+                                <span class="dollar">€</span> 
+                                <span class="qty">150</span> 
+                                <span class="month">/month</span>
+                            </div>
+                            <div class="features">
+                                <p>
+                                    <strong>5</strong>
+                                    team members
+                                </p>
+                                <p>
+                                    <strong>Send as many offers as you like</strong>
+
+                                </p>
+                                <p>
+                                    <strong>Full page level analytics</strong>
+                                </p>
+                                <p>
+                                    <strong>Email opened notifications</strong>
+                                    
+                                </p>
+                                 <p>
+                                    <strong>Priority support</strong>
+                                    
+                                </p>
+                            </div>
+                            <a class="order" href="https://cc.kneto.com/accounts/register/">ORDER NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plan Box -->
+                <div class="col-sm-4 standar">
+                    <div class="plan">
+                        <div class="wrapper">
+                            <h3>Early Access</h3>
+                            <h5>large plan</h5>
+                            <div class="price">
+                                <span class="dollar">€</span> 
+                                <span class="qty">499</span> 
+                                <span class="month">/month</span>
+                            </div>
+                             <div class="features">
+                                <p>
+                                    <strong>12</strong>
+                                    team members
+                                </p>
+                                <p>
+                                    <strong>Send as many offers as you like</strong>
+
+                                </p>
+                                <p>
+                                    <strong>Full page level analytics</strong>
+                                </p>
+                                <p>
+                                    <strong>Email opened notifications</strong>
+                                    
+                                </p>
+                                 <p>
+                                    <strong>Priority support</strong>
+                                    
+                                </p>
+                            </div>
+                            <a class="order" href="https://cc.kneto.com/accounts/register/">ORDER NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="start">
+                <p>Start your free, no-risk, 15 day trial! </p>
+                <a class="order" href="https://cc.kneto.com/accounts/register/">ORDER NOW</a>
+            </div>
+        </div>
+    </div>
+    <!-- FAQs -->
+    <div id="faq">
+        <div class="container">
+            <div class="section_header">
+                <h3>Frequently asked questions</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 block">
+                    <div class="box">
+                        <p class="title">How long are your contracts?</p>
+                        <p class="answ">
+                            For the single user plan: after your fifteen day trail your will be billed on a 30 day cycle and can cancel anytime. For the multi-user plans you will be billed in a 30 day cycle and you cancel at anytime.   </p>
+                    </div>
+                    <div class="box">
+                        <p class="title">How do I sign up?</p>
+                        <p class="answ">
+                            Click the ‘Order now’ button. This will take you to a registration page, enter your information and we’ll send you a verification link in your email. Click that link, log in with your email address and your chosen password then select your plan and your done!</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 block">
+                    <div class="box">
+                        <p class="title">What is meant by unlimited?</p>
+                        <p class="answ">
+                            You can send as many offers and proposals as you need. Keep in mind we are not tool for bulk marketing communications. You should know who you are communicating with. </p>
+                    </div>
+                    <div class="box">
+                        <p class="title">How does the trial work?</p>
+                        <p class="answ">
+                            Sign up for the ‘Single User’ plan and try Kneto out risk free for 15 days. If you don’t wish to continue, go to ‘Accounts’ and select ‘Cancel’.  If you like it and want to have the rest of you team use it, upgrade to one of the ‘Early Access' plans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ 
+{% endblock %}
