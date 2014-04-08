@@ -60,18 +60,11 @@
 
     <div id="signup_wrapper" class="row">
         <div class="container">
-        <h2>SIGN UP NOW</h2>
-        <p>{{ page.homepage.rightbottom_line1 }}</p>
-        
-        {% errors_for form %}
-        <form class="mezzanine-form form-inline" method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
-            <input type="hidden" name="referrer" value="">
-            {% csrf_token %}
-            
-                <input id="id_email" maxlength="75" name="email" type="email" class="input-lg form-control" placeholder="Enter your email here">
-                <input id="id_form_name" name="form_name" type="hidden" value="NUL" />
-            <input  class="btn btn-lg btn-primary" type="submit" value="Go">
-        </form>
+        <div class="start">
+                <h2>Start your free, no-risk, 15 day trial! </h2>
+                <a class="btn btn-primary btn-lg active" role="button" href="/pricing">Start Now!</a>
+            </div>
+        </div>
         </div>
     </div>
 
