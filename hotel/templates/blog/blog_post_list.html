@@ -51,7 +51,7 @@
                             {% endeditable %}
 
                             {% block blog_post_list_post_content %}{% editable blog_post.content %}
-                                {{ blog_post.description_from_content|safe }}
+                                {{ blog_post.description_from_content|truncatechars:'300'|striptags }}
                             {% endeditable %}{% endblock %}
                         </div>
                         <div class="author_box">
