@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-sm-8">
                     {% block blog_post_detail_featured_image %}{% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
-                        <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 600 0 %}">
+                        <img class="post_pic img-responsive" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 600 0 %}">
                     {% endif %}{% endblock %}
 
                     <div class="post_content">
