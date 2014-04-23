@@ -108,6 +108,13 @@
   top: 102px;
   text-align: center;
 }
+
+#feature_slider .slide#ideas .info_v {
+  position: relative;
+  top: 92px;
+  text-align: center;
+}
+
 #feature_slider .slide#ideas .info h2 {
   color: #fff;
   font-weight: normal;

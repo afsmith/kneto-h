@@ -134,6 +134,19 @@
             }
         }
 
+        &#ideas {
+            .info_v {
+                position: relative;
+                top: 92px;
+                text-align: center;
+
+                h2 {
+                    color: #fff;
+                    font-weight: normal;
+                }
+            }
+        }
+
         /* Slide 3 */
         &#tour {
             .info {
