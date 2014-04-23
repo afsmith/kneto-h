@@ -151,7 +151,7 @@
         &#tour {
             .info {
                 position: absolute;
-                top: 140px;
+                top: 120px;
                 right: 6%;
                 width: 24%;
 
@@ -161,6 +161,10 @@
                     font-weight: normal;
                     text-shadow: 1px 1px 1px #3b3262;
                     line-height: 57px;
+                }
+                h3 {
+                    color: #fff;
+                    
                 }
 
                 a {

@@ -121,7 +121,7 @@
 }
 #feature_slider .slide#tour .info {
   position: absolute;
-  top: 140px;
+  top: 120px;
   right: 6%;
   width: 24%;
 }
@@ -132,6 +132,12 @@
   text-shadow: 1px 1px 1px #3b3262;
   line-height: 57px;
 }
+
+#feature_slider .slide#tour .info h3 {
+  color: #fff;
+
+}
+
 #feature_slider .slide#tour .info a {
   color: #fff;
   font-weight: bold;
