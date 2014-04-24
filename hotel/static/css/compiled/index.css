@@ -502,21 +502,27 @@
   border-radius: 8px;
 }
 #clients .client .client1 {
-  background: url("../../img/client1.png") 0 -75px;
+  background: url("../../img/blstream.png");
 }
 #clients .client .client1:hover {
   background-position: 1px 0px;
 }
 #clients .client .client2 {
-  background: url("../../img/client2.png") 0 -75px;
+  background: url("../../img/epicore.png") 0 -75px;
 }
 #clients .client .client2:hover {
   background-position: -1px 0px;
 }
 #clients .client .client3 {
-  background: url("../../img/client3.png") 0 -76px;
+  background: url("../../img/corbel.png") 0 -76px;
 }
 #clients .client .client3:hover {
+  background-position: 0px 0px;
+}
+#clients .client .client4 {
+  background: url("../../img/luxus.png") 0 -76px;
+}
+#clients .client .client4:hover {
   background-position: 0px 0px;
 }
 
